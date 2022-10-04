@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h1{
+    font-size: 100px;
+    color: aliceblue;
+    backdrop-filter: brightness(50%);
+    letter-spacing: 6px;
+}
+.btn{
+    background: black;
+    color: rgb(249, 252, 253);
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+    
+}
+.btn:hover{
+    background: white;
+    color: black;
+    transition: 1s;
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+}
+.split.left{
+    position: absolute;
+    left: 0;
+    background: pink;
+    background-image: url(img/iphone_13_PNG29.png);
+    background-size: cover;
+
+}
+.split.right{
+    position: absolute;
+    right: 0;
+    background: lightblue;
+    background-image: url(img/samsung.png);
+    background-size: cover;
+}
+
+.activeLeft .left{
+    width: 75%;
+}
+.activeLeft .right{
+    width: 25%;
+}
+.activeRight .left{
+    width: 25%;
+}
+.activeRight .right{
+    width: 75%;
+}
+
+.left, .right {
+    transition: width 2s ease-in-out;
+}
